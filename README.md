@@ -55,3 +55,4 @@ While the current implementation fulfills the project requirements, there are ar
 
 - **UI Enhancements:** To better handle long alt texts and align with design specifications, the CSS ellipsis effect is used. Exploring alternative solutions, such as tooltips or expandable text, could enhance the user experience.
 
+- **API Request Handling:** The pexelsAPI requests currently use string concatenation for URLs. Leveraging URL or URLSearchParams objects could improve maintainability of API calls.
