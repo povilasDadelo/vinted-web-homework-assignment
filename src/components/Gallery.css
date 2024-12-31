@@ -1,0 +1,65 @@
+.gallery-container {
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.photos-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+/* md */
+@media (min-width: 768px) {
+  .photos-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  .photos-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+.sentinel {
+  height: 1rem;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.spinner {
+  --_size: 3rem;
+  --_thickness: 25%;
+  --_speed: 800ms;
+
+  display: block;
+  margin: 1.25rem auto;
+  width: var(--_size);
+  height: var(--_size);
+  border-radius: 50%;
+  background: conic-gradient(
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet,
+    red
+  );
+  mask-image: radial-gradient(
+    circle closest-side,
+    transparent calc(100% - var(--_thickness)),
+    black calc(100% - var(--_thickness)),
+    #000 100%
+  );
+  animation: rotate var(--_speed) linear infinite;
+}
